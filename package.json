@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "compile":"node-sass -i public/main.css -o public/css/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "node-sass": "^7.0.1",
     "nodemon": "^2.0.19"
   }
 }
