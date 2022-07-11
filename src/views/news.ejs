@@ -17,7 +17,7 @@
 
       <%  if(articles!=null){ %> 
         <% articles.forEach(function(article,index){ %>
-          <a href="#" class="news__card">
+          <a href="/article/<%- article.id  %> " class="news__card">
             <% if(article.thumbnail_url==false)  {%> 
 <% article.thumbnail_url="https://j2v9w7i9.stackpathcdn.com/wp-content/uploads/2021/11/learn-elementor.jpg" %> 
 <img src="<%- article.thumbnail_url  %> " alt="">
