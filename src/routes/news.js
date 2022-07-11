@@ -7,8 +7,7 @@ const axios=require("axios")
 newsRouter.get("",async(req,res)=>{
 try {
     const newsApi=await axios.get("https://raddy.dev/wp-json/wp/v2/posts")
-    res.render("news",{ articles:newsApi.data})
-    console.log(newsApi)
+    res.render("news",{ articles : newsApi.data })
 } catch (error) {
  if(error.response){
     console.log(error.response.data)

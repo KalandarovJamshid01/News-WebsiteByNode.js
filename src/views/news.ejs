@@ -7,8 +7,23 @@
 </head>
 <body>
 
-<% articles.forEach(function(article,index){ %>
-<% article.title.rendered %> 
-<% }) %>
+<header class="header">
+<div class="header__logo">Node.Js News</div>
+<div class="header__search">Search</div>
+</header>
+
+<div class="wrapper">
+    <div class="news">
+
+        <% articles.forEach(function(article,index){ %>
+          <a href="#" class="news__card">
+            <h2><%= article.title.rendered %> </h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ullam! Adipisci provident voluptas fuga a aperiam cupiditate, harum facilis vero. Atque reiciendis eligendi perferendis eius placeat corporis ducimus maxime tenetur?</p>
+          </a>
+            
+            <% }) %>
+    </div>
+   
+</div>
 </body>
 </html
