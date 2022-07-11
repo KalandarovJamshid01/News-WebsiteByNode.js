@@ -15,13 +15,24 @@
 <div class="wrapper">
     <div class="news">
 
+      <%  if(articles!=null){ %> 
         <% articles.forEach(function(article,index){ %>
           <a href="#" class="news__card">
-            <h2><%= article.title.rendered %> </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ullam! Adipisci provident voluptas fuga a aperiam cupiditate, harum facilis vero. Atque reiciendis eligendi perferendis eius placeat corporis ducimus maxime tenetur?</p>
+            <% if(article.thumbnail_url==false)  {%> 
+<% article.thumbnail_url="https://j2v9w7i9.stackpathcdn.com/wp-content/uploads/2021/11/learn-elementor.jpg" %> 
+<img src="<%- article.thumbnail_url  %> " alt="">
+
+<% } else {%> 
+            <img src="<%- article.thumbnail_url  %> " alt="">
+            <% } %> 
+            <h2><%- article.title.rendered %> </h2>
+            <p><%- article.excerpt.rendered  %> </p>
           </a>
             
             <% }) %>
+            <% }else{ %>
+              No posts Found
+              <% } %>  
     </div>
    
 </div>

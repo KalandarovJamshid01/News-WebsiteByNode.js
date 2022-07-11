@@ -10,12 +10,19 @@ try {
     res.render("news",{ articles : newsApi.data })
 } catch (error) {
  if(error.response){
+   res.render("news",{ articles : null })
+
     console.log(error.response.data)
     console.log(error.response.status)
     console.log(error.response.headers)
  }else if(error.request){
+   res.render("news",{ articles : null })
+
     console.log(error.request)
+   res.render("news",{ articles : null })
  }else{
+   res.render("news",{ articles : null })
+
     console.log("ERROR",err.message)
  }
 }
